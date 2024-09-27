@@ -1,3 +1,8 @@
+# Read in a csv file and print the contents. This time, we will print the header row and all subsequent rows separately.
+# Author: Michael Curley
+# The csv file we are reading in is data.csv, stored in the Data_Files directory
+# Seperating the header row is useful if you want to run some operations on the data, but not on the header row.
+
 import csv
 
 FILENAME= "data.csv"
