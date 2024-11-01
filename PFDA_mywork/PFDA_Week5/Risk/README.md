@@ -114,8 +114,7 @@ to handle everything from small to very large projects with speed and efficiency
 
 ## 4.0 Get Help
 
-If you encounter any issues or have any questions about this project please [open an issue](https://github.com/MikeCurleyCoosan/PFDA/
-issues) on GitHub. Alternatively you can contact me at G00376456@atu.ie. 
+If you encounter any issues or have any questions about this project please [open an issue](https://github.com/MikeCurleyCoosan/PFDA/issues) on GitHub. Alternatively you can contact me at G00376456@atu.ie. 
 
 ## 5.0 Contribute 
 
