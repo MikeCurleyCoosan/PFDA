@@ -1,0 +1,48 @@
+
+
+Assignment 5
+Risk
+I love the board game Risk.
+
+Write a program (or notebook) called assignment_5_risk (.py or .ipynb)
+
+The program should simulates 1000 individual battle rounds in Risk (3 attacker vs 2 defender) and plots the result.
+
+One battle round is one shake of the attacker and defender dice.
+
+I am being vague about what it plot, I will leave that to you.
+
+For the last few marks.
+
+A more complicated version simulates a full series of rounds for armies of arbitrary sizes, until one side is wiped out,
+
+and plots the results.
+
+(This is open ended, so it is only for the last few marks)
+
+Rules of Risk
+
+In Risk one army fights another. (using 6 sided dice)
+
+In each battle round, the attacker can put forward up to three of their troops (3 dice).
+
+The defender can use up to two of their defending troops (2 dice).
+
+Each side looses troops depending on the following rules:
+
+The two top dice dice are compared (ie the attackers top dice roll with the defenders top dice roll) 
+If the attackers dice is the same or lower they loose one troop otherwise the defender looses a troop (ie if the attackers dice is higher)
+The next two highest dice from each side are then compared (ie the attackers second highest to the defenders second highest)
+If the attackers dice is the same or lower they loose one troop otherwise the defender looses a troop (ie if the attackers dice is higher)
+
+
+Examples
+Attacker rolls	Defender Rolls	Attacker Loses	Defender Loses	Explanation
+6,4,1	5,3	0	2	6 beats 5 and 4 beats 3 (the one is ignored as the lowest)
+6,6,6	6,3	1	1	Defenders 6 beats the attackers first 6
+and the attackers second 6 beats the defenders 3
+5,4,4	5,4	2	0	The defenders 5 beat the attackers 5
+and the defenders 4 beat the attackers 4
+(defender wins when the dice are the same)
+See the rules How to play Risk | Official Rules | UltraBoardGames
+search "to decide a battle"
