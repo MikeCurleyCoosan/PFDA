@@ -2,6 +2,7 @@ class Menu:
 #Author: Michael Curley
 #Date: 24/10/2024
 # This class will be used to display a menu to the user, and will run the appropriate code based on the user's choice
+    
 
     def display_menu():
         print("\t Risk Game Menu")
@@ -10,12 +11,13 @@ class Menu:
         print("\t(Q). Exit")
 
         choice = input("Type one letter (a,b or q):").strip().lower()
-
         return choice
 
     def simulate_battle():
-       import os 
-       os.print("\t Create a battle simulation")
+       print("\t Create a battle simulation")
+       from battle import Battle as battle
+       battle()
+
     
     def simulate_war():
         pass
@@ -29,4 +31,4 @@ class Menu:
         "q": do_nothing
     }
 
-    display_menu()
+    

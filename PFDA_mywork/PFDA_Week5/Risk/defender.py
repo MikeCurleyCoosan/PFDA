@@ -19,14 +19,16 @@ class Defender:
         self.defending_dice = defending_dice
 
     def roll_dice(self):
+        #Import the required classes, random and numpy
         import random
         import numpy as np
-        defending_dice_rolls = []
-        for i in range(self.defending_dice):
-            defending_dice_rolls.append(random.randint(1, 6))
-            defending_dice_rolls.sort(reverse=True)
-            defending_dice_rolls = np.array(defending_dice_rolls)
-        return defending_dice_rolls
+        ## Generate a random dice roll x no of attacking dice times no of attacking armies
+        defending_dice_rolls = np.random.randint(1,7,(self.defending_armies, self.defending_dice))
+        #Sort the dice rolls from hightest to lowest
+        defending_dice_rolls = np.sort(defending_dice_rolls, axis=1)[:, ::-1]
+        #Whittle down the array to just 2 columns 
+        defending_dice_rolls = defending_dice_rolls[:, :self.defending_dice]
+        return defending_dice_rolls 
     
     
     def calculate_defender_armies_lost(self, attacking_dice_rolls, defending_dice_rolls):
@@ -40,13 +42,6 @@ class Defender:
                 armies_lost += 0
         return armies_lost
     
-    def determine_winner(self, attacking_armies, defending_armies):
-        if attacking_armies == 0:
-            return "Defender"
-        elif defending_armies == 0:
-            return "Attacker"
-        else:
-            return "Draw"
         
     def armies_remaining_defender(self, defending_armies, defending_armies_lost):
         return defending_armies - defending_armies_lost
