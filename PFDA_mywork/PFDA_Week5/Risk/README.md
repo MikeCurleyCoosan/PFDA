@@ -130,3 +130,4 @@ I am a student in the Higher Diploma in Data Analytics Course in ATU, Galway Ire
 
 
 - Reference #1: https://www.ultraboardgames.com/risk/game-rules.php
+- Reference #2: https://numpy.org/doc/stable/reference/random/generated/numpy.random.randint.html

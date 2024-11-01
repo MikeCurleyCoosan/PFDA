@@ -40,14 +40,15 @@ class Attacker:
                 if defending_dice_rolls[i, j] == attacking_dice_rolls[i, j]:
                     armies_lost += 1
                 elif defending_dice_rolls[i, j] > attacking_dice_rolls[i, j]:
-                    armies_lsot += 1
-                else:
                     armies_lost += 1
-            return armies_lost
+                else:
+                    armies_lost += 0
+
+        return armies_lost
     
         
-    def armies_remaining_attacker(self, attacking_armies, attacking_armies_lost):
-        return attacking_armies - attacking_armies_lost
+    def armies_remaining_attacker(self, attacking_armies, attacking_dice, attacking_armies_lost):
+        return (attacking_armies*attacking_dice) - attacking_armies_lost
 
     
     def __str__(self):

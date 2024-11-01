@@ -31,20 +31,23 @@ class Defender:
         return defending_dice_rolls 
     
     
-    def calculate_defender_armies_lost(self, attacking_dice_rolls, defending_dice_rolls):
+    def calculate_defender_armies_lost(self, defending_armies, attacking_dice_rolls, defending_dice_rolls):
+        import numpy as np
         armies_lost = 0
-        for i in range(min(len(attacking_dice_rolls), len(defending_dice_rolls))):
-            if attacking_dice_rolls[i] > defending_dice_rolls[i]:
-                armies_lost += 1
-            elif attacking_dice_rolls[i] == defending_dice_rolls[i]:
-                armies_lost += 0
-            else:
-                armies_lost += 0
+        # Loop through the dice rolls and compare the results
+        for i in range(defending_armies):
+            for j in range(len(defending_dice_rolls[1])):
+                if defending_dice_rolls[i, j] == attacking_dice_rolls[i, j]:
+                    armies_lost += 0
+                elif defending_dice_rolls[i, j] > attacking_dice_rolls[i, j]:
+                    armies_lost += 0
+                else:
+                    armies_lost += 1
+            
         return armies_lost
-    
         
-    def armies_remaining_defender(self, defending_armies, defending_armies_lost):
-        return defending_armies - defending_armies_lost
+    def armies_remaining_defender(self, defending_armies,defending_dice, defending_armies_lost):
+        return (defending_armies*defending_dice) - defending_armies_lost
     
     def __str__(self):
         return f"Attacker: {self.attacking_armies} armies, {self.attacking_dice} dice\nDefender: {self.defending_armies} armies, {self.defending_dice} dice"
