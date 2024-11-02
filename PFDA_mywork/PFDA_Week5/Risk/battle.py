@@ -20,17 +20,17 @@ class Battle:
 
     #Request army and dice information from user
     attack_armies = int(input("\t Please enter the number of attacking armies "))
-    attack_dice = int(input("\t Please enter the number of attacking dice "))
+    attack_dice = int(input("\t Please enter the number of attacking soldiers in each army "))
     #Check that the number of attacking dice is less than 3
     while attack_dice < 0 or attack_dice > 3:
         print("The number of attacking dice must be between 1 and 3")
-        attack_dice = int(input("\t Please enter the number of attacking dice "))
+        attack_dice = int(input("\t Please enter the number of attacking soldiers in each army "))
     defence_armies = int(input("\t Please enter the number of defending armies "))
-    defending_dice = int(input("\t Please enter the number of defending dice "))
+    defending_dice = int(input("\t Please enter the number of defending soldiers in each army "))
     #Check that the number of defending dice is less than 2
     while defending_dice < 0 or defending_dice > 2:
         print("The number of defending dice must be between 1 and 2")
-        defending_dice = int(input("\t Please enter the number of defending dice "))
+        defending_dice = int(input("\t Please enter the number of defending soldiers in each army "))
    
     #Battles will take the least number of armies put forward by either attack or defence
     if attack_armies < defence_armies:
@@ -56,28 +56,28 @@ class Battle:
     print('\n')
 
     #The number of attacking armies put into the battle
-    print(f'The number of attacking armies put into the battle was : {attack_armies*attack_dice}')
+    print(f'The number of attacking soldiers put into the battle was : {attack_armies*attack_dice}')
 
     #The number of defending armies put into the battle
-    print(f'The number of defending armies put into the battle was : {defence_armies*defending_dice}')
+    print(f'The number of defending soldiers put into the battle was : {defence_armies*defending_dice}')
 
 
     #Calculate the number of armies lost by the attacker
     offence_armies_lost = offence.calculate_attacker_armies_lost(attack_armies, offence_dice, defence_dice)
-    print(f'The number of attaking armies lost in this battle was : {offence_armies_lost}')
+    print(f'The number of attaking soldiers lost in this battle was : {offence_armies_lost}')
 
 
     #Calculate the number of armies lost by the defender
     defence_armies_lost = defence.calculate_defender_armies_lost(defence_armies, offence_dice, defence_dice)
-    print(f'The number of defending armies lost in this battle was : {defence_armies_lost}')
+    print(f'The number of defending soldiers lost in this battle was : {defence_armies_lost}')
 
     #Calculate the number of armies remaining for the attacker
     offence_armies_remaining = offence.armies_remaining_attacker(attack_armies, attack_dice, offence_armies_lost)
-    print(f'The number of attaking armies remaining in this battle was : {offence_armies_remaining}')
+    print(f'The number of attaking soldiers remaining in this battle was : {offence_armies_remaining}')
 
     #Calculate the number of armies remaining for the defender
     defence_armies_remaining = defence.armies_remaining_defender(defence_armies, defending_dice, defence_armies_lost)
-    print(f'The number of defending armies remaining in this battle was : {defence_armies_remaining}')
+    print(f'The number of defending soldiers remaining in this battle was : {defence_armies_remaining}')
 
     print('\n')
     print('************************************************************************************************')
@@ -121,7 +121,7 @@ class Battle:
     for i in range (attack_armies):
         if df['Attacker Wins'][i] == 2:
             attacker_percentage += 1/(attack_armies)
-    print(attacker_percentage)
+    #print(attacker_percentage)
 
 
     # Percentage of wins for the defender   
@@ -129,11 +129,11 @@ class Battle:
     for i in range (attack_armies):
         if df['Defender Wins'][i] == 2:
             defender_percentage += 1/(attack_armies)
-    print(defender_percentage)
+    #print(defender_percentage)
 
     # Draw percentage
     draw_percentage = 1 - attacker_percentage - defender_percentage
-    print(draw_percentage)
+    #print(draw_percentage)
 
     # Double check the percentages
     draw_percentage_check=0
@@ -142,3 +142,30 @@ class Battle:
             draw_percentage_check += 1/(attack_armies)
 
     #print(draw_percentage_check)
+
+    # Plot the results as a pie chart
+
+    fig, ax = plt.subplots()
+
+    #Set the font style and size for the title and labels
+    font1 = {'family':'serif','color':'blue','size':20}
+    font2 = {'family':'serif','color':'darkred','size':15}
+
+    #Set the title of the pie chart
+    ax.set_title('Risk Game Results', fontdict = font1)
+
+    labels= 'Attacker Wins', 'Defender Wins', 'Draw'
+    sizes = [attacker_percentage, defender_percentage, draw_percentage]
+    colors = ['blue', 'red', 'green']
+    explode = (0.1, 0.1, 0.1)  # explode the slices 
+
+    ax.pie(sizes, explode=explode, labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=140)
+    ax.set_xlabel('Percentage of Wins', fontdict = font2)
+    ax.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+    ax.axis('equal')
+
+    #Create a pie chart of the results in the plots folder
+    plt.savefig("Plots/battle.png")
+    plt.clf()
+    plt.close()
+
