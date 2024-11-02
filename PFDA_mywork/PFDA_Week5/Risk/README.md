@@ -67,6 +67,12 @@ The project should simulates 1000 individual battle rounds in Risk (3 attacker v
 
 One battle round is one shake of the attacker and defender dice.
 
+
+A more complicated version simulates a full series of rounds for armies of arbitrary sizes, until one side is wiped out,
+
+and plots the results.
+
+
 '''Rules of Risk
 
 In each battle round, the attacker can put forward up to three of their troops (This has being assumed to be the maximum number of troops 
