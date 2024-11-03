@@ -93,7 +93,9 @@ Each side looses troops depending on the following rules:
 
 Why the project is useful
 
-## 3.0 Get Started
+----
+## 3.0 Get 
+----
 
 ### 3.1 To get stated with this project please follow these steps:
 
@@ -118,19 +120,43 @@ to handle everything from small to very large projects with speed and efficiency
 6. Type 'python runner.py' to run the game.
 
 
+----
 ## 4.0 Get Help
+----
 
-If you encounter any issues or have any questions about this project please [open an issue](https://github.com/MikeCurleyCoosan/PFDA/issues) on GitHub. Alternatively you can contact me at G00376456@atu.ie. 
+If you encounter any issues or have any questions about this project please [open an issue](https://github.com/
+MikeCurleyCoosan/PFDA/issues) on GitHub. Alternatively you can contact me at G00376456@atu.ie. 
 
+### 4.1 Issue Tracker
+
+Visit our [issue tracker](https://github.com/MikeCurleyCoosan/PFDA/issues) on GitHub to see if your problem has already been reported or to report a new issue. Feel free to join any ongoing discussions related to bugs or feature requests.
+
+### 4.2 Contact Us
+
+If you need further assistance or have any other inquiries, you can reach out to me via [email](G00376456@gatuie). I will do my best to respond to your enquiry in a timely manner.
+Please don't hesitate to reach out if you need help or have feedback on how the project may be improved.
+
+----
 ## 5.0 Contribute 
+----
 
-Who maintains and contributes to the project
+Contributions from the community to help improve the project are welcome. Whether you're a developer, data scientist, or game enthusiast, there are several ways you can contribute:
 
+### 5.1 Feature Requests
+
+Have an idea for a new feature or enhancement? Feel free to [open a feature request](https://github.com/MikeCurleyCoosan/PFDA/issues) on our GitHub repository. I value your feedback and are always looking for ways to enhance the project.
+
+### 5.2 Code Contributions
+
+If you're interested in contributing code, I would love to have your help! You can [open a pull request](https://github.com/MikeCurleyCoosan/PFDAt/pulls) on our GitHub repository, which I will endevour to respond to in a timely manner.
+
+----
 ## 6.0 Author
+----
 
 ### About Me: 
 
-I am a student in the Higher Diploma in Data Analytics Course in ATU, Galway Ireland.
+My name is Michael Curley and I am a student in the Higher Diploma in Data Analytics Course in ATU, Galway Ireland. This project was undertaken as part of the Programming for Data Analytics Module undertaken as part of that course of study.
 
 ### References
 
