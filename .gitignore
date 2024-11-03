@@ -164,6 +164,6 @@ cython_debug/
 
 # My Local Files to be ignored. Just keep the file on the local machine
 
-/PFDA_mywork/PFDA_Week5/risky.ipynb
+./PFDA_mywork/PFDA_Week5/risky.ipynb
 
 # End of .gitignore file
