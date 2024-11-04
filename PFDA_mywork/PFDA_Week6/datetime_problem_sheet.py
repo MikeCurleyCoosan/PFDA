@@ -30,3 +30,7 @@ def add_days(date, days):
 # Function to increment a date by adding a number of years, months, days to it
 
 def increment_date(date, years, months, days):
+    date = add_years(date, years)
+    date = add_months(date, months)
+    date = add_days(date, days
+    return date
