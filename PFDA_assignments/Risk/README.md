@@ -62,12 +62,10 @@ This folder contains a mini project for simulating the game of risk using a vari
 
 
 The project should simulates 1000 individual battle rounds in Risk (3 attacker vs 2 defender) and plots the result.
-
 One battle round is one shake of the attacker and defender dice.
 
 
 A more complicated version simulates a full series of rounds for armies of arbitrary sizes, until one side is wiped out,
-
 and plots the results.
 
 
@@ -89,10 +87,10 @@ Each side looses troops depending on the following rules:
 
 ## 2.0 Use of this Project
 
-Why the project is useful
+This project is being used as a learning tool and in particular a look at Numpy and Random number generation. We look at sorting a array of random number, and how to whittle an array down to the required size. We also explore the Pandas Series which is based on the NumPy array. 
 
 ----
-## 3.0 Get 
+## 3.0 Get Started
 ----
 
 ### 3.1 To get stated with this project please follow these steps:
@@ -117,13 +115,27 @@ to handle everything from small to very large projects with speed and efficiency
 
 6. Type 'python runner.py' to run the game.
 
+7. You are then given the following options
+
+![menu](./images/menu.png)
+
+8. Selecting option a. will simulate 1000 individual battle rounds in Risk (3 attacker vs 2 defender) and plots the result.
+One battle round is one shake of the attacker and defender dice. A screenshot of what happens on the console when this option is selected is shown below. The resulting plot is saved to the Plots folder as battle.png.
+
+![select A](./images/selecting_a.png)
+
+9. Selecting option b. will simulates a full series of rounds for armies of arbitrary sizes, until one side is wiped out,
+and plots the results. The user can select the size of both the attacking and defending army, but in the war scenario, the battles will take place based on the smallest army size put forward. An assumption has being made that each round will simulate 3 attackers vs 2 defenders for each army unit. Again a screenshot of the console when this option is selected is shown below. The resulting plot is saved to the Plots folder as war_simulation.png
+
+![select B](./images/selecting_b.png)
+
+10. Seclecting option c. will exit the console gracefully. 
 
 ----
 ## 4.0 Get Help
 ----
 
-If you encounter any issues or have any questions about this project please [open an issue](https://github.com/
-MikeCurleyCoosan/PFDA/issues) on GitHub. Alternatively you can contact me at G00376456@atu.ie. 
+If you encounter any issues or have any questions about this project please [open an issue](https://github.com/MikeCurleyCoosan/PFDA/issues) on GitHub. Alternatively you can contact me at G00376456@atu.ie. 
 
 ### 4.1 Issue Tracker
 
