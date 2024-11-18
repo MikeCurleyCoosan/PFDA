@@ -16,7 +16,7 @@ class Menu:
     #Method to simulate a battle
     def simulate_battle():
        print("\t Create a battle simulation")
-       from battle import Battle as battle
+       from battle1000 import Battle1000 as battle
        battle()
        print("\t Battle simulation complete")
        #Exit the program
@@ -25,7 +25,7 @@ class Menu:
     #Method to simulate a war
     def simulate_war():
         print("\t Create a war simulation")
-        from war import War as war
+        from battle import Battle as war
         war()
         print("\t War simulation complete")
         #Exit the program

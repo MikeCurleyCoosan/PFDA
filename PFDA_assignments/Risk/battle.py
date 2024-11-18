@@ -137,7 +137,7 @@ class Battle:
     sns.lineplot(y=results['Attacker Remaining'], x=results.index, color='blue', label='Attacker Remaining')
     sns.lineplot(y=results['Defender Remaining'], x=results.index, color='red', label='Defender Remaining')
     #Set the title of the plot
-    plt.title('Results of the Mulit-Battle', fontdict = font1)
+    plt.title('Results of the War Simulation', fontdict = font1)
     #Set the x-axis label
     plt.xlabel('Number of rounds', fontdict = font2)
     #Set the y-axis label
@@ -148,7 +148,7 @@ class Battle:
 
 
     #Save the plot as a png file
-    plt.savefig("Plots/Multi-battle.png")
+    plt.savefig("Plots/war_simulation.png")
     plt.clf()
     plt.close()
 
