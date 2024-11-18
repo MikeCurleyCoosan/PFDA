@@ -20,6 +20,7 @@ class Battle:
     import pandas as pd
     import numpy as np
     import matplotlib.pyplot as plt
+    import seaborn as sns   
 
     
     attack_dice = 3
@@ -36,12 +37,14 @@ class Battle:
 
     attackerLosses = [attack_armies*attack_dice]
     defenderLosses = [defence_armies*defending_dice]
+    startingCountAttack = (attack_armies*attack_dice)
+    startingCountDefence = (defence_armies*defending_dice)
     attacker_remaining = attack_armies*attack_dice
     defender_remaining = defence_armies*defending_dice
     roundNumber = 1
 
 
-    while attacker_remaining >= 0 and defender_remaining >=0:
+    while attacker_remaining >= 3 and defender_remaining >=2:
 
         #Create an instance of a n offence
         offence = attacker(attack_armies, attack_dice)
@@ -61,13 +64,13 @@ class Battle:
         battle_loss_defender = defence.calculate_defender_armies_lost(defence_armies, offence_dice, defence_dice)
         attacker_remaining -= battle_loss_attacker
         defender_remaining -= battle_loss_defender
-        attackerLosses.append(battle_loss_attacker)
+        attackerLosses.append(attacker_remaining)
         print(f'\t Round {roundNumber} : Attacker losses: {battle_loss_attacker} Defender losses: {battle_loss_defender}')
-        defenderLosses.append(battle_loss_defender)
+        defenderLosses.append(defender_remaining)
         print(f'\t Round {roundNumber} : Attacker armies remaining: {attacker_remaining} Defender armies remaining: {defender_remaining}')
 
-        attack_armies = attacker_remaining
-        defence_armies = defender_remaining
+        attack_armies = int(attacker_remaining/3)
+        defence_armies = int(defender_remaining/2)
 
         if attack_armies < defence_armies:
             defence_armies = attack_armies
@@ -75,119 +78,77 @@ class Battle:
             attack_armies = defence_armies
         
         roundNumber += 1
-        
-        
-        
-        
-        
-        
 
 
     print(attackerLosses)
     print(defenderLosses)
 
 
-'''
-    #RESULTS OF THE BATTLE
+
+    #RESULTS OF THE ROUNDS OF BATTLES
     print('\n')
     print('************************************************************************************************')
-    print('\t\tRESULTS OF THE BATTLE')
+    print('\t\tRESULTS OF THE ROUNDS OF BATTLES')
     print('************************************************************************************************')
     print('\n')
 
     #The number of attacking armies put into the battle
-    print(f'The number of attacking soldiers put into the battle was : {attack_armies*attack_dice}')
+    print(f'The number of attacking soldiers put into the battle was : {startingCountAttack}')
 
     #The number of defending armies put into the battle
-    print(f'The number of defending soldiers put into the battle was : {defence_armies*defending_dice}')
+    print(f'The number of defending soldiers put into the battle was : {startingCountDefence}')
 
 
     #Calculate the number of armies lost by the attacker
-    offence_armies_lost = offence.calculate_attacker_armies_lost(attack_armies, offence_dice, defence_dice)
+    offence_armies_lost = (startingCountAttack) - attackerLosses[-1]
     print(f'The number of attaking soldiers lost in this battle was : {offence_armies_lost}')
 
 
-    #Calculate the number of armies lost by the defender
-    defence_armies_lost = defence.calculate_defender_armies_lost(defence_armies, offence_dice, defence_dice)
+    #Calculate the number of armies lost by the defendeer
+    defence_armies_lost = (startingCountDefence) - defenderLosses[-1]
     print(f'The number of defending soldiers lost in this battle was : {defence_armies_lost}')
 
     #Calculate the number of armies remaining for the attacker
-    offence_armies_remaining = offence.armies_remaining_attacker(attack_armies, attack_dice, offence_armies_lost)
+    offence_armies_remaining = attackerLosses[-1]
     print(f'The number of attaking soldiers remaining in this battle was : {offence_armies_remaining}')
 
     #Calculate the number of armies remaining for the defender
-    defence_armies_remaining = defence.armies_remaining_defender(defence_armies, defending_dice, defence_armies_lost)
+    defence_armies_remaining = defenderLosses[-1]
     print(f'The number of defending soldiers remaining in this battle was : {defence_armies_remaining}')
 
     print('\n')
     print('************************************************************************************************')
 
-    #Testing 
-    #print("The attacking army dice rolls are ")
-    #print(offence_dice
-    #print("The defending army dice rolls are ")
-    #print(defence_dice)
+    #Plot the results of the battle
 
-    
-    # Create a new matrix to store the results of the battles
-    results = np.zeros((attack_armies, len(defence_dice[1])))
+    #Create a dataframe to store the results of the battle
+    results = pd.DataFrame({'Attacker Remaining': attackerLosses, 'Defender Remaining': defenderLosses})
 
-    # Loop through the dice rolls and compare the results
-    for i in range(attack_armies):
-       for j in range(len(defence_dice[1])):
-            if defence_dice[i, j] == offence_dice[i, j]:
-               results[i, 1] += 1
-            elif defence_dice[i, j] > offence_dice[i, j]:
-                results[i, 1] += 1
-            else:
-               results[i, 0] += 1
+    print(results)
 
-    #Print the results of the battle 
-    #print(results)
+    #Plot the results of the battle# Plot the results as a pie chart
+    fig, ax = plt.subplots()
+    #Set the font style and size for the title and labels
+    font1 = {'family':'serif','color':'blue','size':20}
+    font2 = {'family':'serif','color':'darkred','size':15}
 
-    #Convert the results from a numpy float array to an integer array
+    #Set the colors for the plot
+    colors = ['blue', 'red', 'green']
+    sns.lineplot(y=results['Attacker Remaining'], x=results.index, color='blue', label='Attacker Remaining')
+    sns.lineplot(y=results['Defender Remaining'], x=results.index, color='red', label='Defender Remaining')
+    #Set the title of the plot
+    plt.title('Results of the Mulit-Battle', fontdict = font1)
+    #Set the x-axis label
+    plt.xlabel('Number of rounds', fontdict = font2)
+    #Set the y-axis label
+    plt.ylabel('Number of Armies Remaining', fontdict = font2)
 
-    results = results.astype(int)
-    results
-
-    # Create a pandas dataframe to store the results
-
-    df = pd.DataFrame(results, columns=['Attacker Wins', 'Defender Wins'])
-    print(df)
+    #Add a grid
+    ax.grid(True, which='both', linestyle='--', linewidth=0.4)
 
 
-    # Percentage of wins for the 
-    attacker_percentage = 0
-    for i in range (attack_armies):
-        if df['Attacker Wins'][i] == 2:
-            attacker_percentage += 1/(attack_armies)
-    #print(attacker_percentage)
-
-
-    # Percentage of wins for the defender   
-    defender_percentage = 0
-    for i in range (attack_armies):
-        if df['Defender Wins'][i] == 2:
-            defender_percentage += 1/(attack_armies)
-    #print(defender_percentage)
-
-    # Draw percentage
-    draw_percentage = 1 - attacker_percentage - defender_percentage
-    #print(draw_percentage)
-
-    # Double check the percentages
-    draw_percentage_check=0
-    for i in range (attack_armies):
-        if df['Attacker Wins'][i] == 1 and df['Defender Wins'][i] == 1:
-            draw_percentage_check += 1/(attack_armies)
-
-'''
-    
-    
-    
-
-    
-    
-    
-    
+    #Save the plot as a png file
+    plt.savefig("Plots/Multi-battle.png")
+    plt.clf()
+    plt.close()
 

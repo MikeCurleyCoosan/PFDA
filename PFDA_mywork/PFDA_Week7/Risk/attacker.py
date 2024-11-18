@@ -36,7 +36,7 @@ class Attacker:
         armies_lost = 0
         # Loop through the dice rolls and compare the results
         for i in range(attacking_armies):
-            for j in range(len(defending_dice_rolls[1])):
+            for j in range(2):
                 if defending_dice_rolls[i, j] == attacking_dice_rolls[i, j]:
                     armies_lost += 1
                 elif defending_dice_rolls[i, j] > attacking_dice_rolls[i, j]:

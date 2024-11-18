@@ -20,6 +20,7 @@ class Menu:
        battle()
        print("\t Battle simulation complete")
        
+       
 
     #Method to simulate a war
     def simulate_war():

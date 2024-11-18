@@ -36,13 +36,11 @@ class Defender:
         armies_lost = 0
         # Loop through the dice rolls and compare the results
         for i in range(defending_armies):
-            for j in range(len(defending_dice_rolls[1])):
-                if defending_dice_rolls[i, j] == attacking_dice_rolls[i, j]:
-                    armies_lost += 0
-                elif defending_dice_rolls[i, j] > attacking_dice_rolls[i, j]:
-                    armies_lost += 0
-                else:
+            for j in range(2):
+                if defending_dice_rolls[i, j] < attacking_dice_rolls[i, j]:
                     armies_lost += 1
+                else:
+                    armies_lost += 0
             
         return armies_lost
         
