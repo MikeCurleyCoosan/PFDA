@@ -69,7 +69,7 @@ A more complicated version simulates a full series of rounds for armies of arbit
 and plots the results.
 
 
-'''Rules of Risk
+**Rules of Risk**
 
 In each battle round, the attacker can put forward up to three of their troops (This has being assumed to be the maximum number of troops 
 that an attacker can put forward). 
@@ -113,9 +113,25 @@ to handle everything from small to very large projects with speed and efficiency
 
 5. Navigate to the project directory in VS Code
 
-6. Type 'python runner.py' to run the game.
+6. In the terminal window of the project, type 'python runner.py' to run the game.
 
-7. You are then given the following options
+```sh
+python runner.py
+
+```
+
+7. The game then starts and you are given the following options
+
+```sh
+python runner.py
+        Risk Game Menu
+        (a). Simulate a battle
+        (b). Simulate a war
+        (q). Exit
+Type one letter (a,b or q):
+
+```
+
 
 ![menu](./images/menu.png)
 
