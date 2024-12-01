@@ -24,14 +24,19 @@ class CleanDataset:
                                     )
         self.dataset.columns = ['Date/Time (utc)', 'Indicator', 'Precipitation Amount (mm)', 'Indicator', 'Temperature (°C)', 'Indicator', 'Wet Bulb Temperature (°C)', 'Dew Point Temp (°C)', 'Vapour Pressure (hPa)','Relative Humidity (%)', 'Mean Sea Level Pressure (hPa)','Indicator', 'Mean Wind Speed (knot)', 'Indicator', 'Predominant Wind Direction (deg)', 'Present Weather', 'Past Weather', 'Sunshine duration (hours)', 'Visibility', 'Cloud Height (ft * 100s)', 'Cloud amount']
         print('Dataset imported')
+    
         
     #Create a function to remove the NA values from the dataset
     def remove_na_values(self):
         import pandas as pd
         print('Removing NA values')
-        self.dataset.drop(columns=['Indicator'])
-        self.dataset.dropna(inplace=True)
-        print('NA values removed')
+        #Remove the indicator columns
+        self.dataset.drop(columns=['Indicator'], inplace=True)
+        print('Indicator columns removed')
+
+        #Remove the rows with NA values
+        self.dataset.dropna()
+
 
     #Create a function to clean the datetime column and add a month and year column
     def clean_datetime(self):
@@ -57,4 +62,4 @@ class CleanDataset:
         self.remove_na_values()
         self.clean_datetime()
         self.rename_windcolumn()
-        return 
+        return self.dataset
