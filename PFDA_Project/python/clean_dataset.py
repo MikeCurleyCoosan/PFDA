@@ -18,12 +18,29 @@ class CleanDataset:
         self.filename = filename
         self.skiprows = skiprows
         url = file_path + filename
-        self.dataset = pd.read_csv(url, 
+        try:
+            self.dataset = pd.read_csv(url, 
                                    skiprows=skiprows, 
                                    skipinitialspace=True,   
                                     )
-        self.dataset.columns = ['Date/Time (utc)', 'Indicator', 'Precipitation Amount (mm)', 'Indicator', 'Temperature (°C)', 'Indicator', 'Wet Bulb Temperature (°C)', 'Dew Point Temp (°C)', 'Vapour Pressure (hPa)','Relative Humidity (%)', 'Mean Sea Level Pressure (hPa)','Indicator', 'Mean Wind Speed (knot)', 'Indicator', 'Predominant Wind Direction (deg)', 'Present Weather', 'Past Weather', 'Sunshine duration (hours)', 'Visibility', 'Cloud Height (ft * 100s)', 'Cloud amount']
-        print('Dataset imported')
+        except FileNotFoundError: 
+            print('File not found. Please check the file path and name')
+
+
+        #Create a function to import the dataset
+        if self.skiprows == 23:
+            try:
+                self.dataset.columns = ['Date/Time (utc)', 'Indicator', 'Precipitation Amount (mm)', 'Indicator', 'Temperature (°C)', 'Indicator', 'Wet Bulb Temperature (°C)', 'Dew Point Temp (°C)', 'Vapour Pressure (hPa)','Relative Humidity (%)', 'Mean Sea Level Pressure (hPa)','Indicator', 'Mean Wind Speed (knot)', 'Indicator', 'Predominant Wind Direction (deg)', 'Present Weather', 'Past Weather', 'Sunshine duration (hours)', 'Visibility', 'Cloud Height (ft * 100s)', 'Cloud amount']
+                print('Dataset imported')
+            except KeyError:
+                print('Columns not found. Please check the column names')
+        else:
+            try:
+                self.dataset.columns = ['Date/Time (utc)', 'Indicator', 'Precipitation Amount (mm)', 'Indicator', 'Temperature (°C)', 'Indicator', 'Wet Bulb Temperature (°C)', 'Dew Point Temp (°C)', 'Vapour Pressure (hPa)','Relative Humidity (%)', 'Mean Sea Level Pressure (hPa)','Indicator', 'Mean Wind Speed (knot)', 'Indicator', 'Predominant Wind Direction (deg)']
+                print('Dataset imported')
+            except KeyError:
+                print('Columns not found. Please check the column names')
+        
     
         
     #Create a function to remove the NA values from the dataset
@@ -33,7 +50,6 @@ class CleanDataset:
         #Remove the indicator columns
         self.dataset.drop(columns=['Indicator'], inplace=True)
         print('Indicator columns removed')
-
         #Remove the rows with NA values
         self.dataset.dropna()
 
