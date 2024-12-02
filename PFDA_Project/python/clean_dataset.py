@@ -21,7 +21,8 @@ class CleanDataset:
         try:
             self.dataset = pd.read_csv(url, 
                                    skiprows=skiprows, 
-                                   skipinitialspace=True,   
+                                   skipinitialspace=True,
+                                   na_values = ['-', 'N/A', 'NA', 'nan', 'NaN', 'NAN', 'Nan', 'N/a', 'n/a', 'na', ''] 
                                     )
         except FileNotFoundError: 
             print('File not found. Please check the file path and name')
@@ -51,7 +52,7 @@ class CleanDataset:
         self.dataset.drop(columns=['Indicator'], inplace=True)
         print('Indicator columns removed')
         #Remove the rows with NA values
-        self.dataset.dropna()
+        self.dataset.dropna(inplace=True, ignore_index=True)
 
 
     #Create a function to clean the datetime column and add a month and year column
