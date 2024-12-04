@@ -7,8 +7,7 @@ class Defender:
 #The defender object will have the following methods:
 #1. A method to roll the dice
 #2. A method to calculate the number of armies lost by the defender
-#3. A method to determine the winner of the battle
-#4. A method to determine the number of armies remaining for the defender
+#3. A method to determine the number of armies remaining for the defender
 
 
 #Author: Michael Curley
