@@ -39,10 +39,12 @@ class WriteDB:
             print('Error downloading the file:', e)
             
   
-        # The database URL must be in a specific format
+        # The database URL must be in a specific format. This format is as follows:
         db_url = "mysql+pymysql://{USER}:{PWD}@{HOST}/{DBNAME}"
+
         # Replace the values below with your own
         # DB username, password, host and database name
+        # These should be read in by a config file. Look at this time permitting
         db_url = db_url.format(
             USER = "root",    
             PWD = "",
@@ -52,12 +54,12 @@ class WriteDB:
         # Create the DB engine instance. We'll use
         # this engine to connect to the database
         engine = create_engine(db_url, echo=False)
+        #Test that the engine has being created
         print("Engine created")
-        # Import the create_engine method
-        # after SQL operation is done
+        # Import the create_engine method from the sqlalchemy module
         with engine.begin() as conn:
         # Invoke DataFrame method to_sql() to
-        # create the table 'largest_cities' and
+        # create the table based on where the weather data is coming from and
         # insert all the DataFrame rows into it
             weather_data.to_sql(
                 name=self.station_name, # database table
@@ -69,9 +71,3 @@ class WriteDB:
         conn.close()
         # Close the engine
         engine.dispose()
-
-
-
-
-
-
