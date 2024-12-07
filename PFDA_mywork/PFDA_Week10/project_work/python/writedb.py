@@ -1,4 +1,7 @@
 class WriteDB:
+    #This class will write the data from the csv files into a database.
+    #Author: Michael Curley
+    #Date: 06/12/2024
 
 
     def __init__(self):
@@ -6,6 +9,7 @@ class WriteDB:
 
     #Method to import the csv files from the web into the data folder and return the data
     def write_db(self, station_name, station_id, skiprows):
+        #Import the required libraries 
         import pandas as pd
         import requests
         from io import StringIO
