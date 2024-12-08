@@ -1,10 +1,3 @@
-,Name,Subject,Grade
-0,John,math,23
-1,John,english,25
-2,John,science,24
-3,Jane,math,22
-4,Jane,english,21
-5,Jane,science,26
-6,Tom,math,25
-7,Tom,english,24
-8,Tom,science,25
+version https://git-lfs.github.com/spec/v1
+oid sha256:b0198d4587c8aa57f4d680a7a89cd471ab6d56b8f165fa67f3e22c72b20bd403
+size 180
