@@ -14,7 +14,7 @@ class CleanDataset:
     #Constructor. This is the code that is run when a new instance of the class is created.
     def __init__(self, filename, skiprows):
         import pandas as pd
-        file_path = './data/'
+        file_path = './../data/hourly_data'
         self.filename = filename
         self.skiprows = skiprows
         url = file_path + filename

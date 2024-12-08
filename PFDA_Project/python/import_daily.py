@@ -23,7 +23,7 @@ class ImportDaily:
         # Define the url and the data folder variables
         base_url = 'https://cli.fusio.net/cli/climate_data/webdata/dly{}.csv'
         url = base_url.format(self.station_id)
-        data_folder = 'data2'
+        data_folder = './../data/daily_data/'
 
         # Create the data folder if it does not exist
         if not os.path.exists(data_folder):

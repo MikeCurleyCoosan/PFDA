@@ -1,5 +1,5 @@
 class Import_Data:
-    #This class will be used to import the csv files from the web into the data folder
+    #This class will be used to import the hourly csv files from the web into the data folder
     #Author: Michael Curley
     #Date: 06/12/2024
 
@@ -23,7 +23,7 @@ class Import_Data:
         # Define the url and the data folder variables
         base_url = 'https://cli.fusio.net/cli/climate_data/webdata/hly{}.csv'
         url = base_url.format(self.station_id)
-        data_folder = 'data'
+        data_folder = './../data/hourly_data'
 
         # Create the data folder if it does not exist
         if not os.path.exists(data_folder):

@@ -15,10 +15,10 @@ class Join:
         self.columns_to_keep = columns_to_keep
 
         #Define the data folder
-        data_folder = 'data2'
+        data_folder = './../data/daily_data/'
 
         #Define the output file path
-        output_file = 'data2/joined_data.csv'
+        output_file = './../data/daily_data/joined_data.csv'
 
         #Create an empty list to store the overall dataframe
         all_data = []

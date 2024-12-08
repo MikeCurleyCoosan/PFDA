@@ -7,7 +7,7 @@ class WriteDB:
     def __init__(self):
         None
 
-    #Method to import the csv files from the web into the data folder and return the data
+    #Method to import the csv files from the web into a database called weather
     def write_db(self, station_name, station_id, skiprows):
         #Import the required libraries 
         import pandas as pd
@@ -28,7 +28,7 @@ class WriteDB:
         # Define the url and the data folder variables
         base_url = 'https://cli.fusio.net/cli/climate_data/webdata/hly{}.csv'
         url = base_url.format(self.station_id)
-        data_folder = 'data'
+        data_folder = './../data/hourly_data/'
 
         # Create the data folder if it does not exist
         if not os.path.exists(data_folder):
