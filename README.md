@@ -1,6 +1,6 @@
 # PFDA
 
-![Banner Image](Images/Programming_for_Data_Analytics.png)
+![Banner Image](Images/programming_for_data.png)
 
 
 <a target="_blank" href="https://docs.python.org/3/tutorial/index.html">
@@ -139,8 +139,7 @@ git clone https://github.com/MikeCurleyCoosan/PFDA.git
 2. Download and install [Anaconda](https://www.anaconda.com/). Anaconda comes with its own set of pre-installed 
 data science packages and tools, making it convenient for beginners to set up their environment quickly. The 
 pre-installed packages that are required to work with the project are [Pandas](https://pandas.pydata.org/), 
-[NumPy](https://numpy.org/) [Matplotlib](https://matplotlib.org/) and [Seaborn](https://seaborn.pydata.org/index.
-html).
+[NumPy](https://numpy.org/) [Matplotlib](https://matplotlib.org/) and [Seaborn](https://seaborn.pydata.org/index.html).
 
 3. Download and install [Visual Studio Code](https://code.visualstudio.com/). Visual Studio Code is a code editor 
 with support for development operations like debugging, task running, and version control.
