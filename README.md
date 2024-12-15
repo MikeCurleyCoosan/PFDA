@@ -90,7 +90,7 @@ This has being done through the completion of a number of assignments which are 
 The four assignments that were completed were as follows.
 
 - **assignment2-weather.ipynb**
-  - Using the file given, which is stored as `weatherreadings1.csv` in the `data` folder of this repository create a nice plot of temperature over time.
+  - Using the file given, which is stored as `weatherreadings1.csv` in the `PFDA_assignments/data` folder of this repository, create a nice plot of temperature over time.
   - Use the `dryBulbTemperature_Celsius` column.
 
 - **assignment03-pie.ipynb**
