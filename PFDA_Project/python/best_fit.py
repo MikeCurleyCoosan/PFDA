@@ -14,12 +14,11 @@ class BestFit:
         import matplotlib.pyplot as plt
         import matplotlib.dates as mdates
 
-        #Create a placeneame variable to store the placename
-        placename = ''
         #Set the placename variable to the placename passed in
         self.placename = placename
         #Create a variable to store the column name for the mean wind speed
-        windspeed = 'Mean Wind Speed (knot)_' + placename
+        windspeed = 'Mean Wind Speed (knot)_'+self.placename #Create a variable to store the column name for the mean wind speed 
+        print(windspeed)
 
         bestfit = self.df[['Date/Time (utc)', windspeed]]
 
@@ -30,16 +29,16 @@ class BestFit:
         bestfit = bestfit.resample('ME', on='Date/Time (utc)').mean()
 
         #Select data from 2012 onwards
-        bestfit = bestfit[bestfit.index.year >= 2012]
+        bestfit_2012 = bestfit[bestfit.index.year >= 2012].copy()
 
         #Convert the Date/Time (utc) column to a number so that it can be used in the polyfit function
-        bestfit['DateNumber'] = mdates.date2num(bestfit.index)
+        bestfit_2012['DateNumber'] = mdates.date2num(bestfit_2012.index)
 
         #Calculate the best fit parameters for the wind speed data m,c
-        idx = np.isfinite(bestfit['DateNumber']) & np.isfinite(bestfit[windspeed])
+        idx = np.isfinite(bestfit_2012['DateNumber']) & np.isfinite(bestfit_2012['Mean Wind Speed (m/s)'])
 
         #Calculate our values for m and c
-        m, c = np.polyfit(bestfit['DateNumber'][idx], bestfit[windspeed][idx], 1)
+        m, c = np.polyfit(bestfit_2012['DateNumber'][idx], bestfit_2012['Mean Wind Speed (m/s)'][idx], 1)
 
         #Plot the best fit line
 
@@ -50,10 +49,10 @@ class BestFit:
         #Create a figure and axes object
         fig, ax = plt.subplots()
         #Create a scatter plot of the wind speed data from 2012 onwards
-        ax.plot(bestfit['Mean Wind Speed (m/s)'], 'o', label='Data', color='blue', markersize=5) #The 'o' is used to create a scatter plot
+        ax.plot(bestfit_2012['Mean Wind Speed (m/s)'], 'o', label='Data', color='blue', markersize=5) #The 'o' is used to create a scatter plot
 
         #Create the best fit line using the coefficients returned from the polyfit function
-        ax.plot(m*bestfit + c, 'r', label='Best fit line')
+        ax.plot(m*bestfit_2012['DateNumber'] + c, 'r-', label='Best fit line')
 
         #Set the x and y axis labels
         ax.set_xlabel('Year', fontdict=font2)
