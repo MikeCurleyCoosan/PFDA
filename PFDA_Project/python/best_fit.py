@@ -7,20 +7,20 @@ class BestFit:
     def __init__(self, df): #The constructor takes in the dataframe
         self.df = df
 
-    #Create a function to create a best fit line for the petal length and petal width variables
+    #Create a function to create a best fit line for the mean wind speed data
     def best_fit(self, placename):
         #Import the required libraries
         import numpy as np
         import matplotlib.pyplot as plt
         import matplotlib.dates as mdates
 
-        #Set the placename variable to the placename passed in
+        #Set the placename variable to the placename passed in as an argument to the function
         self.placename = placename
         #Create a variable to store the column name for the mean wind speed
         windspeed = 'Mean Wind Speed (knot)_'+self.placename #Create a variable to store the column name for the mean wind speed 
         print(windspeed)
 
-        bestfit = self.df[['Date/Time (utc)', windspeed]]
+        bestfit = self.df[['Date/Time (utc)', windspeed]].copy() 
 
         #Convert the Mean Wind Speed (utc) column to m/s
         bestfit['Mean Wind Speed (m/s)'] = round(bestfit[windspeed] * 0.514444, 2)
@@ -47,7 +47,14 @@ class BestFit:
         font2 = {'family':'serif','color':'darkred','size':15}
 
         #Create a figure and axes object
-        fig, ax = plt.subplots()
+        #Plot the best fit line
+        fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(12, 8))
+
+        #Set up a function to format the y axis
+        def windspeed_formatter(windspeed, pos):
+            s = f"{windspeed} (m/s)"
+            return s
+
         #Create a scatter plot of the wind speed data from 2012 onwards
         ax.plot(bestfit_2012['Mean Wind Speed (m/s)'], 'o', label='Data', color='blue', markersize=5) #The 'o' is used to create a scatter plot
 
@@ -60,12 +67,25 @@ class BestFit:
 
         #Add a title to the plot
         plt.title('Best fit line for Wind Speed data from 2012', fontdict=font1)
-        #Add a legend
-        plt.legend(loc='upper right', fontsize=12)
 
-        
+        #Add a legend
+        ax.legend(loc='upper right', fontsize=12)
+
+        #Set the major locator to every 2nd day, minor locator to every day.
+        ax.xaxis.set_major_locator(mdates.YearLocator())  
+        ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y'))  
+        ax.yaxis.set_major_formatter(plt.FuncFormatter(windspeed_formatter))
+
+        #Add ticks
+        plt.xticks(fontsize=12, rotation=45)
+        plt.yticks(fontsize=12)
+
+        #Add a grid
+        plt.grid(True, which='both', linestyle='--', linewidth=0.5)
+
+        save_path = 'images/best_fit_line_'+self.placename+'.png'
         #Save the plot as a .png file
-        plt.savefig('images/best_fit_line.png')
+        plt.savefig(save_path)
         #Clear the current figure
         plt.clf()
         #Close the current figure
