@@ -65,8 +65,10 @@ class BestFit:
         ax.set_xlabel('Year', fontdict=font2)
         ax.set_ylabel('Mean Wind Speed (m/s)', fontdict=font2)
 
+        title = 'Best fit line for Wind Speed for '+self.placename+' from 2012'
+
         #Add a title to the plot
-        plt.title('Best fit line for Wind Speed data from 2012', fontdict=font1)
+        plt.title(title, fontdict=font1)
 
         #Add a legend
         ax.legend(loc='upper right', fontsize=12)
