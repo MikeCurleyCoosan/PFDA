@@ -14,6 +14,7 @@ class BestFit:
         #Import the required libraries
         import numpy as np
         import matplotlib.pyplot as plt
+        import matplotlib.dates as mdates
 
         #Create local variables for the petal length and petal width variables
         mean_wind= self.df['Mean Wind Speed (knot)']
