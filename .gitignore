@@ -166,9 +166,9 @@ cython_debug/
 
 \PFDA_mywork\PFDA_Week5\risky.py
 PFDA_mywork/PFDA_Project/project.ipynb
-PFDA_mywork/PFDA_Project/data/weather_station_data/*.csv    # Ignore all files in the data folder       
-PFDA_mywork/PFDA_Project/data/weather_station_data/*.txt    # Ignore all files in the data folder
-PFDA_mywork/PFDA_Project/data/weather_station_data/*.pdf   # Ignore all files in the data folder
+PFDA_mywork/PFDA_Project/data/weather_station_data/ # Ignore the weather_station_data folder itself
+PFDA_mywork/PFDA_Project/data/* # Ignore all files in the data folder 
+PFDA_mywork/PFDA_Project/data/ # Ignore the data folder itself
 
 
 # End of .gitignore file
