@@ -1,5 +1,11 @@
 class WriteDB:
     #This class will write the data from the csv files into a database.
+    #The database will be called weather and the tables will be named after the station name
+    #The columns in the tables will be the same as the columns in the csv files
+    #The database will be created using the sqlalchemy library
+    #The database will be a MySQL database
+    #The class will have a method called write_db that will take in the station name, station id and skiprows as arguments
+    #The method will read the csv file from the web, create a database and write the data to the database
     #Author: Michael Curley
     #Date: 06/12/2024
 

@@ -1,5 +1,12 @@
 class Join:
-    #Method used to join the dataframes in the data folder into a single dataframe
+    #Method used to join the dataframes in the data folder into a single dataframe.
+    #The columns to keep are passed in as an argument
+    #The station data is passed in as an argument. This is a dictionary with the station id as the key
+    #The value is a dictionary with the metadata and the data
+    #The metadata includes the station name and the skiprows. The data is a pandas dataframe
+    #The data is saved to a csv file called joined_data.csv. This file is saved in the data folder
+    
+
     #Author: Michael Curley
     #Date: 7/12/2024
 
