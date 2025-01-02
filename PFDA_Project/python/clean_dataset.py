@@ -12,13 +12,13 @@ class CleanDataset:
 
 
     #Constructor. This is the code that is run when a new instance of the class is created.
-    def __init__(self, filename, id, skiprows):
+    def __init__(self, name, id, skiprows):
         import pandas as pd
-        file_path = 'data/hourly_data/'
-        self.filename = filename
+        file_path = 'data/hourly_data/hly'
         self.skiprows = skiprows
+        self.name = name
         self.id = id
-        location = ('{}'+ '{}' + '_' + '{}'+'.csv').format(file_path, filename, id)
+        location = ('{}' + '{}'+'.csv').format(file_path, self.id)
         #print(location)
         try:
             self.dataset = pd.read_csv(location, 
@@ -69,7 +69,7 @@ class CleanDataset:
     #Create a function to rename the wind column and reduce the dataset to only the columns we need
     def rename_windcolumn(self):
         import re
-        station_name = self.filename.split('_')
+        station_name = self.name.split('_')
         #print(station_name)
         name = str(station_name[0]) + '_Wind_Speed'
         name = self.dataset[['Date/Time (utc)', 'Precipitation Amount (mm)','Temperature (°C)','Mean Wind Speed (knot)','Predominant Wind Direction (deg)', 'Month', 'Year']].copy()

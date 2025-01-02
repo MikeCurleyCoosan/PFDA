@@ -1,22 +1,34 @@
 class Stations:
+#Class to hold the metadata and weather data for the stations
+#The metadata includes the county, station name, latitude, longitude, altitude and skiprows
+#The weather data is stored in a pandas DataFrame
+#The stations are identified by their station number
+#
+    def __init__(self):
+        None
+    
+    def get_station(self, id, county):
+        import pandas as pd
+        self.id = id
+        self.county = county
+        #Create a dictionary to hold the metadata and weather data for the stations
+        #The keys are the station numbers
+        #The values are a dictionary with keys metadata and data
+        #The metadata is a dictionary with keys county, station_name, latitude, longitude, altitude and skiprows
+        #Author: Michael Curley
 
-    stations = {
-        "Athenry" :1875,
-        "Cork_Airport" : 3904,
-        "Shannon_Airport" : 518,
-        "Dublin_Airport" : 532,
-        "Mullingar": 875,
-        "Gurteen" : 1475
-    }
-
-    def __init__(self, stations):
-        self.stations = stations
-
-    def get_stations(self):
-        return self.stations
-
-    def get_station_name(self, station_name):
-        return self.stations[station_name]
-
-    def get_station_id(self, station_id):
-        return self.stations[station_id]
+        station = {
+            id: {
+                "metadata": {
+                    "county": self.county, 
+                    "station_name": None, 
+                    "latitude": None, 
+                    "longitude": None, 
+                    "altitude": None, 
+                    "skiprows": None
+                },
+                #"data": pd.DataFrame()
+            }
+        }
+        return station
+    
