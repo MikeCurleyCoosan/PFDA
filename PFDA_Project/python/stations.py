@@ -25,9 +25,9 @@ class Stations:
                     "latitude": None, 
                     "longitude": None, 
                     "altitude": None, 
-                    "skiprows": None
+                    "skiprows": None,
+                    "skiprows_hourly": None
                 },
-                #"data": pd.DataFrame()
             }
         }
         return station
