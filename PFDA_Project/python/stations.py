@@ -20,7 +20,6 @@ class Stations:
         station = {
             id: {
                 "metadata": {
-                    "county": self.county, 
                     "station_name": None, 
                     "latitude": None, 
                     "longitude": None, 
