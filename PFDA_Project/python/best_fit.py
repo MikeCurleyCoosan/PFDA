@@ -17,19 +17,19 @@ class BestFit:
         #Set the placename variable to the placename passed in as an argument to the function
         self.placename = placename
         #Create a variable to store the column name for the mean wind speed
-        windspeed = 'Mean Wind Speed (knot)_'+self.placename #Create a variable to store the column name for the mean wind speed 
+        windspeed = 'Mean Wind Speed (m/s)_'+self.placename #Create a variable to store the column name for the mean wind speed 
         print(windspeed)
 
         bestfit = self.df[['Date/Time (utc)', windspeed]].copy() 
 
         #Convert the Mean Wind Speed (utc) column to m/s
-        bestfit['Mean Wind Speed (m/s)'] = round(bestfit[windspeed] * 0.514444, 2)
+        bestfit['Mean Wind Speed (m/s)'] = round(bestfit[windspeed], 2)
 
         #Resample for monthly wind speed data while keeping the mean and the index as the date
         bestfit = bestfit.resample('ME', on='Date/Time (utc)').mean()
 
         #Select data from 2012 onwards
-        bestfit_2012 = bestfit[bestfit.index.year >= 2012].copy()
+        bestfit_2012 = bestfit[bestfit.index.year >= 2012 and bestfit.index.year <=2024].copy()
 
         #Convert the Date/Time (utc) column to a number so that it can be used in the polyfit function
         bestfit_2012['DateNumber'] = mdates.date2num(bestfit_2012.index)

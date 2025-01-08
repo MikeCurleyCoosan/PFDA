@@ -74,6 +74,9 @@ class CleanDataset:
         name = str(station_name[0]) + '_Wind_Speed'
         name = self.dataset[['Date/Time (utc)', 'Precipitation Amount (mm)','Temperature (°C)','Mean Wind Speed (knot)','Predominant Wind Direction (deg)', 'Month', 'Year']].copy()
         name.rename(columns={'Mean Wind Speed (knot)': 'Mean Wind Speed (knot)_' + str(station_name[0])}, inplace=True)
+        #Convert the knots to m/s and update the column name
+        name['Mean Wind Speed (knot)_' + str(station_name[0])] = name['Mean Wind Speed (knot)_' + str(station_name[0])] * 0.514444
+        name.rename(columns={('Mean Wind Speed (knot)_' + str(station_name[0])): ('Mean Wind Speed (m/s)_'  + str(station_name[0]))}, inplace=True)
         self.dataset = name
         #print('Wind column renamed')
         #print(self.dataset.head())
