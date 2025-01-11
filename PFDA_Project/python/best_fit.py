@@ -1,6 +1,10 @@
 class BestFit:
 #Author: Michael Curley
 #This class is used to create a best fit line when comparing the mean windspeed over an extended period of time
+#The class takes in a dataframe and a placename as arguments. The class contains one function called best_fit which creates a best fit line for the mean wind speed data
+#The best fit line is created using the polyfit function from the numpy library
+#The best fit line is then plotted using the matplotlib library
+#The plot is saved as a .png file in the images folder
 #https://numpy.org/doc/stable/reference/generated/numpy.polyfit.html#numpy-polyfit
 #https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_numpy.html#pandas.DataFrame.to_numpy
     #Constructor. This is the code that is run when a new instance of the class is created. Here we pass in the dataframe
