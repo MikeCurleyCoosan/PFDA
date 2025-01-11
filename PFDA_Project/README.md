@@ -5,9 +5,9 @@
 ![Wind](./images/windpark.png)
 
 
-<div>
 <a target="_blank" href="https://docs.python.org/3/tutorial/index.html">
-  <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python"/> </a>
+  <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python"/>
+</a>
 <a target="_blank" href="https://www.anaconda.com/">
   <img src="https://img.shields.io/badge/Anaconda-%2344A833.svg?style=for-the-badge&logo=anaconda&logoColor=white" alt="Anaconda"/>
 </a>
@@ -31,13 +31,13 @@ basic-writing-and-formatting-syntax">
 </a>
 <a target="_blank" href="https://code.visualstudio.com/">
   <img src="https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&
-logoColor=white" alt="Visual Studio Code"/>
+logoColor=white" 
+alt="Visual Studio Code"/>
 </a>
 <a target="_blank" href="https://jupyter.org/">
   <img src="https://img.shields.io/badge/jupyter-%23FA0F00.svg?style=for-the-badge&logo=jupyter&logoColor=white" alt="Jupyter 
 Notebook"/>
 </a>
-</div>
 
 -----
 
