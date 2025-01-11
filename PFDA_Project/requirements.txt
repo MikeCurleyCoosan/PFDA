@@ -6,6 +6,13 @@ pymysql==1.1.1
 numpy==1.26.4
 seaborn==0.13.2
 matplotlib==3.9.2
+tensorflow==2.18.0
+statsmodels==0.14.2
+skikit-learn==1.5.1
+keras==3.8.0
+jupyterlab==4.2.5
+requests==2.32.3
+statsmodels==0.14.2
 
 
 
