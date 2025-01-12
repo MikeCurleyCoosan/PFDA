@@ -5,9 +5,9 @@
 ![Wind](./images/windpark.png)
 
 
+<div>
 <a target="_blank" href="https://docs.python.org/3/tutorial/index.html">
-  <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python"/>
-</a>
+  <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python"/> </a>
 <a target="_blank" href="https://www.anaconda.com/">
   <img src="https://img.shields.io/badge/Anaconda-%2344A833.svg?style=for-the-badge&logo=anaconda&logoColor=white" alt="Anaconda"/>
 </a>
@@ -22,8 +22,7 @@
 alt="Matplotlib"/>
 </a>
 <a target="_blank" href="https://docs.github.com/en/get-started/writing-on-github/
-getting-started-with-writing-and-formatting-on-github/
-basic-writing-and-formatting-syntax">
+getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax">
   <img src="https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white" alt="Markdown"/>
 </a>
 <a target="_blank" href="https://www.latex-project.org/">
@@ -31,13 +30,13 @@ basic-writing-and-formatting-syntax">
 </a>
 <a target="_blank" href="https://code.visualstudio.com/">
   <img src="https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&
-logoColor=white" 
-alt="Visual Studio Code"/>
+logoColor=white" alt="Visual Studio Code"/>
 </a>
 <a target="_blank" href="https://jupyter.org/">
   <img src="https://img.shields.io/badge/jupyter-%23FA0F00.svg?style=for-the-badge&logo=jupyter&logoColor=white" alt="Jupyter 
 Notebook"/>
 </a>
+</div>
 
 -----
 
@@ -49,7 +48,8 @@ repository._
 _You can find out more about writing in MarkDown in [GitHub Documentation](https://docs.github.com/en/get-started/writing-on-github/
 getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)_
 
------
+---
+
 
 ## Table of Contents.
 
@@ -60,7 +60,7 @@ getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatti
 * [Contribute](#50-contribute)
 * [Author](#60-author)
 
-## ***1.0 About this project**
+## 1.0 About this project
 
 This folder contains the project for the Programming for Data Analytics module, as part of the Higher Diploma in Data Analytics, at the Atlantic Technological University (ATU) Galway for the Year 2024/2025. 
 
@@ -76,13 +76,14 @@ The weather data that we are analysing was downloaded from the [Met Éireann His
 #### requirements.txt
 A list of packages from the Python install in the source environment required for the Jupyter notebook, script or program to run. The following command will install the packages in requirements.txt:
 
-'''sh
+```sh
 pip install -r requirements.txt
-'''
+
+```
 
 #### project.ipynb
-A Jupyter notebook containing the project submission - an analysis of wind data for a selected set of weather stations downloaded from Met Éireann.
-Jupyter Notebook is a web-based interactive environment used to create notebook documents that can contain live code, equations, visualizations, media and other computational outputs. Jupyter notebooks are often used by programmers and data scientists to document, experiment, document and demonstrate code-based workflows.
+A Jupyter notebook containing the project submission - an analysis of wind data for a selected set of weather stations downloaded from Met Éireann historical website.
+Jupyter Notebook is a web-based interactive environment used to create notebook documents that can contain live code, equations, visualizations, media and other computational outputs. Jupyter notebooks are often used by programmers and data scientists to document, experiment, and demonstrate code-based workflows.
 
 ### subdirectories
 
