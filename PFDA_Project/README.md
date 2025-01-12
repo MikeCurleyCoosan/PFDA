@@ -74,6 +74,7 @@ The weather data that we are analysing was downloaded from the [Met Éireann His
 
 ### 2.1 Repository Contents:
 
+```sh
 /PFDA
 ├── /PFDA_assignments               
 ├── /PFDA_mywork/        
@@ -89,7 +90,7 @@ The weather data that we are analysing was downloaded from the [Met Éireann His
 │   └── requirements.txt
 │   └── .gitattributes
 │   └── .gitignore
-
+```
 
 #### requirements.txt
 A list of packages from the Python install in the source environment required for the Jupyter notebook, script or program to run. The following command will install the packages in requirements.txt:
