@@ -54,8 +54,11 @@ getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatti
 
 * [About this project](#10-about-this-project)
 * [Use of this project](#20-use-of-this-project)
+  * [2.1 Repository Contents](#21-repository-contents)
 * [Get Started](#30-get-started)
 * [Get Help](#40-get-help)
+  * [4.1 Issue Tracker](#41-issue-tracker)
+  * [4.2 Contact Us ](#42-contact-us)
 * [Contribute](#50-contribute)
 * [Author](#60-author)
 
@@ -69,7 +72,23 @@ This project is been used to demonstate learning from the above Module by analys
 
 The weather data that we are analysing was downloaded from the [Met Éireann Historical Data website](https://www.met.ie/climate/available-data/historical-data). According to this source there are 25 synoptic weather stations recording a range of parameters including wind speed and direction. The notebook will examine this in more details.
 
-### This repository contains the following files and folders:
+### 2.1 Repository Contents:
+
+/PFDA
+├── /PFDA_assignments               
+├── /PFDA_mywork/        
+└── /PFDA_Project               # Project folder. You are here!!
+│   ├── /data/                  # data folder.
+│     ├── /daily_data/          # daily_data sub directory
+│     ├── /hourly_data/         # hourly_data sub directory
+│      └── joined_data.csv
+│   ├── /imgages/               # images folder
+│   └── /pdf/                   # pdf folder 
+│   └── /python/                # python folder
+│   └── README.md
+│   └── requirements.txt
+│   └── .gitattributes
+│   └── .gitignore
 
 
 #### requirements.txt
