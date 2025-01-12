@@ -60,7 +60,13 @@ getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatti
   * [4.1 Issue Tracker](#41-issue-tracker)
   * [4.2 Contact Us ](#42-contact-us)
 * [Contribute](#50-contribute)
+  * [Feature Requests](#51-feature-requests)
+  * [Code Contributions](#52-code-contributions)
 * [Author](#60-author)
+* [References](#70-references)
+  * [Websites References](#71-websites)
+  * [Book References](#72-books)
+
 
 ## 1.0 About this project
 
@@ -232,18 +238,19 @@ undertaken as part of the Programming for Data Analytics Module undertaken as pa
 - Reference 19: [Pandas- Skipinitialspace funtion](https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html)
 - Reference 20: [Geeks for Geeks - Strip whitespace from dataframe](https://www.geeksforgeeks.org/pandas-strip-whitespace-from-entire-dataframe/)
 - Reference 21: [Random Forest Regressor](https://scikit-learn.org/1.5/modules/generated/sklearn.ensemble.RandomForestClassifier.html)
-- Reference #22: [Generate Markdown tables](https://www.tablesgenerator.com/markdown_tables)
-- Reference #23: [Builtin - Boxplot](https://builtin.com/data-science/boxplot)
-- Reference #24: [Align images in markdown](https://davidwells.io/snippets/how-to-align-images-in-markdown)
-- Reference #25: [Generate a Markdown Banner](https://banner.godori.dev/)
-- Reference #26: [Geeks for geeks - Pandas dataframe correlation](https://www.geeksforgeeks.org/python-pandas-dataframe-corr/)
-- Reference #27: [Pearson Correlation co-effiecient](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient)
-- Reference #28: [Python 3 documentation](https://docs.python.org/3/index.html) 
-- Reference #29: [Matplotlib documentation](https://matplotlib.org/index.html)   
-- Reference #30: [Seaborn documentation](https://seaborn.pydata.org/index.html)  
-- Reference #31: [10 Minutes to Pandas](https://pandas.pydata.org/docs/user_guide/10min.html)  
-- Reference #32: [Mastering Markdown](https://guides.github.com/features/mastering-markdown/) 
-- Reference #33: [Github Flavoured Markdown](https://github.github.com/gfm/#what-is-github-flavored-markdown-) 
+- Reference 22: [Neural networks - Tensorflow](https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=circle&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=4,2&seed=0.72118&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false)
+- Reference #23: [Generate Markdown tables](https://www.tablesgenerator.com/markdown_tables)
+- Reference #24: [Builtin - Boxplot](https://builtin.com/data-science/boxplot)
+- Reference #25: [Align images in markdown](https://davidwells.io/snippets/how-to-align-images-in-markdown)
+- Reference #26: [Generate a Markdown Banner](https://banner.godori.dev/)
+- Reference #27: [Geeks for geeks - Pandas dataframe correlation](https://www.geeksforgeeks.org/python-pandas-dataframe-corr/)
+- Reference #28: [Pearson Correlation co-effiecient](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient)
+- Reference #29: [Python 3 documentation](https://docs.python.org/3/index.html) 
+- Reference #30: [Matplotlib documentation](https://matplotlib.org/index.html)   
+- Reference #31: [Seaborn documentation](https://seaborn.pydata.org/index.html)  
+- Reference #32: [10 Minutes to Pandas](https://pandas.pydata.org/docs/user_guide/10min.html)  
+- Reference #33: [Mastering Markdown](https://guides.github.com/features/mastering-markdown/) 
+- Reference #34: [Github Flavoured Markdown](https://github.github.com/gfm/#what-is-github-flavored-markdown-) 
 
 ### 7.2 Books
 
