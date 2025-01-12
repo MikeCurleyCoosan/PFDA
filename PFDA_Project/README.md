@@ -168,8 +168,7 @@ to handle everything from small to very large projects with speed and efficiency
 ## 4.0 Get Help
 ----
 
-If you encounter any issues or have any questions about this project please [open an issue](https://github.com/MikeCurleyCoosan/PFDA/
-issues) on GitHub. Alternatively you can contact me at G00376456@atu.ie. 
+If you encounter any issues or have any questions about this project please [open an issue](https://github.com/MikeCurleyCoosan/PFDA/issues) on GitHub. Alternatively you can contact me at G00376456@atu.ie. 
 
 ### 4.1 Issue Tracker
 
@@ -196,8 +195,7 @@ on our GitHub repository. I value your feedback and are always looking for ways 
 
 ### 5.2 Code Contributions
 
-If you're interested in contributing code, I would love to have your help! You can [open a pull request](https://github.com/
-MikeCurleyCoosan/PFDAt/pulls) on our GitHub repository, which I will endevour to respond to in a timely manner.
+If you're interested in contributing code, I would love to have your help! You can [open a pull request](https://github.com/MikeCurleyCoosan/PFDAt/pulls) on our GitHub repository, which I will endevour to respond to in a timely manner.
 
 ----
 ## 6.0 Author
@@ -208,8 +206,56 @@ MikeCurleyCoosan/PFDAt/pulls) on our GitHub repository, which I will endevour to
 My name is Michael Curley and I am a student in the Higher Diploma in Data Analytics Course in ATU, Galway Ireland. This project was 
 undertaken as part of the Programming for Data Analytics Module undertaken as part of that course of study.
 
-### References
+## 7.0 References
+
+### 7.1 Websites
+
+***
+- Reference 1: [Met Eireann historical Data]( https://www.met.ie/climate/available-data/historical-data)
+- Reference 2: [Fandom -Wind Turbines]( https://windenergy.fandom.com/wiki/Wind_turbine)
+- Reference 3: [Wind farms in Ireland](https://en.wikipedia.org/wiki/List_of_wind_farms_in_the_Republic_of_Ireland)
+- Reference 4: [sklearn-linear -LinearRegression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model)
+- Reference 5: [IBM -LinearRegression.html](https://www.ibm.com/topics/linear-regression)
+- Reference 6: [Sustainable Energy Authority of Ireland- Renewable energy](https://www.seai.ie/renewable-energy/wind-energy#:~:text=Wind%20energy%20in%20Ireland&text=It%20is%20both%20Ireland%27s%20largest,in%20Ireland%20after%20natural%20gas)
+- Reference 7: [Government of Ireland Climate Action Plan 2024](https://www.gov.ie/pdf/?file=https://assets.gov.ie/296414/7a06bae1-4c1c-4cdc-ac36-978e3119362e.pdf#page=null)
+- Reference 8: [Regular Expressions - Python Documentation](https://docs.python.org/3/library/re.html)
+- Reference 9: [Requests Module - Real Python](https://realpython.com/python-requests/)
+- Reference 10: [Zipfile Module - Python Documentation](https://docs.python.org/3/library/zipfile.html)
+- Reference 11: [SQL Alchemy module](https://www.sqlalchemy.org/)
+- Reference 12: [Git large file storage](https://git-lfs.com/)
+- Reference 13: [Javapoint -skip rows while reading csv file](https://www.javatpoint.com/how-to-skip-rows-while-reading-csv-file-using-pandas)
+- Reference 14: [W3Schools - Python datetime](https://www.w3schools.com/python/python_datetime.asp)
+- Reference 15: [Real Python - Slicing and dicing with .loc[]](https://realpython.com/lessons/slicing-and-dicing-with-loc/)
+- Reference 16: [Pandas - Dataframe resampling](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.resample.html)
+- Reference 17: [Geeks for Geeks- Dataframe Resampling](https://www.geeksforgeeks.org/python-pandas-dataframe-resample/)
+- Reference 18: [Tutorialspoint - Resampling timeseries](https://www.tutorialspoint.com/how-to-resample-time-series-data-in-python)
+- Reference 19: [Pandas- Skipinitialspace funtion](https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html)
+- Reference 20: [Geeks for Geeks - Strip whitespace from dataframe](https://www.geeksforgeeks.org/pandas-strip-whitespace-from-entire-dataframe/)
+- Reference 21: [Random Forest Regressor](https://scikit-learn.org/1.5/modules/generated/sklearn.ensemble.RandomForestClassifier.html)
+- Reference #22: [Generate Markdown tables](https://www.tablesgenerator.com/markdown_tables)
+- Reference #23: [Builtin - Boxplot](https://builtin.com/data-science/boxplot)
+- Reference #24: [Align images in markdown](https://davidwells.io/snippets/how-to-align-images-in-markdown)
+- Reference #25: [Generate a Markdown Banner](https://banner.godori.dev/)
+- Reference #26: [Geeks for geeks - Pandas dataframe correlation](https://www.geeksforgeeks.org/python-pandas-dataframe-corr/)
+- Reference #27: [Pearson Correlation co-effiecient](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient)
+- Reference #28: [Python 3 documentation](https://docs.python.org/3/index.html) 
+- Reference #29: [Matplotlib documentation](https://matplotlib.org/index.html)   
+- Reference #30: [Seaborn documentation](https://seaborn.pydata.org/index.html)  
+- Reference #31: [10 Minutes to Pandas](https://pandas.pydata.org/docs/user_guide/10min.html)  
+- Reference #32: [Mastering Markdown](https://guides.github.com/features/mastering-markdown/) 
+- Reference #33: [Github Flavoured Markdown](https://github.github.com/gfm/#what-is-github-flavored-markdown-) 
+
+### 7.2 Books
+
+- Reference #1: "An introduction to statistical learning with applications in R" - by Gareth James, Daniela Witten, Trevor Hastie, 
+Robert Tibshirani
+- Reference #2: [A Whirlwind Tour of Python - Jake VanderPlas available free online](https://jakevdp.github.io/
+WhirlwindTourOfPython/)
+- Reference #3: "Python for Data Analysis - Data Wrangling with Pandas, NumPy and IPython" - by McKinney, Wes. Python  O'Reilly 
+Media.
+- Reference #4: [Python Data Science Handbook - Jake VanderPlas -O'Reilly](https://jakevdp.github.io/PythonDataScienceHandbook/)
 
 
-- Reference #1: https://www.ultraboardgames.com/risk/game-rules.php
-- Reference #2: https://numpy.org/doc/stable/reference/random/generated/numpy.random.randint.html
+
+
+
