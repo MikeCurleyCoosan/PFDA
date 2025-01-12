@@ -76,21 +76,31 @@ The weather data that we are analysing was downloaded from the [Met Éireann His
 
 ```sh
 /PFDA
-├── /PFDA_assignments               
+├── /PFDA_assignments/               
 ├── /PFDA_mywork/        
-└── /PFDA_Project               # Project folder. You are here!!
-│   ├── /data/                  # data folder.
-│     ├── /daily_data/          # daily_data sub directory
-│     ├── /hourly_data/         # hourly_data sub directory
-│      └── joined_data.csv
-│   ├── /imgages/               # images folder
-│   └── /pdf/                   # pdf folder 
-│   └── /python/                # python folder
-│   └── README.md
-│   └── requirements.txt
-│   └── .gitattributes
+└── /PFDA_Project              # Project folder. You are here!!
+│   ├── /data                  # data subdirectory.
+│   │   ├── /daily_data/       # daily_data folder 
+│   │   ├──   /hourly_data/    # hourly_data folder
+│   │   └── joined_data.csv    # joined_data.csv file 
+│   ├── /imgages/              # images subdirectory folder
+│   ├── /pdf/                  # pdf subdirectory folder 
+│   ├── /python/               # python subdirectory folder
+│   ├── project.ipynb          # project jupiter notebook
+│   ├── README.md              # This file
+│   ├── requirements.txt       # requirements.txt file
+│   ├── .gitattributes
 │   └── .gitignore
 ```
+
+### Files in this repository.
+
+#### project.ipynb
+A Jupyter notebook containing the project submission - an analysis of wind data for a selected set of weather stations downloaded 
+from Met Éireann historical website.
+Jupyter Notebook is a web-based interactive environment used to create notebook documents that can contain live code, equations, 
+visualizations, media and other computational outputs. Jupyter notebooks are often used by programmers and data scientists to 
+document, experiment, and demonstrate code-based workflows.
 
 #### requirements.txt
 A list of packages from the Python install in the source environment required for the Jupyter notebook, script or program to run. The following command will install the packages in requirements.txt:
@@ -99,10 +109,6 @@ A list of packages from the Python install in the source environment required fo
 pip install -r requirements.txt
 
 ```
-
-#### project.ipynb
-A Jupyter notebook containing the project submission - an analysis of wind data for a selected set of weather stations downloaded from Met Éireann historical website.
-Jupyter Notebook is a web-based interactive environment used to create notebook documents that can contain live code, equations, visualizations, media and other computational outputs. Jupyter notebooks are often used by programmers and data scientists to document, experiment, and demonstrate code-based workflows.
 
 ### subdirectories
 
@@ -126,7 +132,7 @@ This folder contains a number of custom python classes which have being develope
 
 #### ./pdf
 
-This folder contains the project brief in .pdf format, if you wish to look at that.
+This folder contains the project brief in .pdf format.
 
 
 ----
